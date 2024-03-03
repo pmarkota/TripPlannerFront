@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <>
       <div>Hero</div>
-      <Spline scene="https://prod.spline.design/iJWG68ZxuqRBduuS/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/dN75eHCWTkraX4T0/scene.splinecode" />
     </>
   );
 };

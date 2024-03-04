@@ -6,15 +6,22 @@ export const Login = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
-  const loggedIn = useCheckLoggedIn();
+  const [loggedIn, setLoggedIn] = useState(useCheckLoggedIn());
 
   useEffect(() => {
+    console.log(loggedIn);
+
+    if (token) {
+      setLoggedIn(true);
+    }
+
     if (loggedIn) {
       navigate("/");
     }
-  }, [loggedIn, navigate]);
+  }, [loggedIn, navigate, token]);
 
   const postLoginData = async (username, password) => {
     const response = await fetch(`${apiUrl}appusers/login`, {

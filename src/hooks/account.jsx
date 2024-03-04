@@ -1,15 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const useCheckLoggedIn = () => {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+
+  const loggedIn = token ? true : false;
   useEffect(() => {
-    if (!token) {
-      navigate("/login");
+    if (loggedIn) {
+      console.log(loggedIn);
+      navigate("/");
     }
-  }, [token, navigate]);
-  return token;
+  }, [loggedIn, navigate]);
+
+  return loggedIn;
 };
 
 export { useCheckLoggedIn };

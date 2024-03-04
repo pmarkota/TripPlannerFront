@@ -1,27 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useCheckLoggedIn } from "../hooks/account";
 import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const token = localStorage.getItem("token");
   const navigate = useNavigate();
-
-  const [loggedIn, setLoggedIn] = useState(useCheckLoggedIn());
-
+  const [loggedIn, setLoggedIn] = useState(
+    localStorage.getItem("token") ? true : false
+  );
   useEffect(() => {
-    console.log(loggedIn);
-
-    if (token) {
-      setLoggedIn(true);
-    }
-
     if (loggedIn) {
+      console.log(loggedIn);
       navigate("/");
     }
-  }, [loggedIn, navigate, token]);
+  }, [loggedIn, navigate]);
 
   const postLoginData = async (username, password) => {
     const response = await fetch(`${apiUrl}appusers/login`, {
@@ -33,6 +26,8 @@ export const Login = () => {
     });
     const data = await response.json();
     localStorage.setItem("token", data.token);
+    setLoggedIn(true);
+
     console.log(response.status, data);
     return data;
   };
@@ -54,6 +49,11 @@ export const Login = () => {
               placeholder="Enter your username"
               onChange={(e) => setUsername(e.target.value)}
               value={username}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  postLoginData(username, password);
+                }
+              }}
             />
           </div>
           <div className="mb-6">
@@ -70,6 +70,11 @@ export const Login = () => {
               placeholder="Enter your password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  postLoginData(username, password);
+                }
+              }}
             />
           </div>
           <div className="flex items-center justify-between">

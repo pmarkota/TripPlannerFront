@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./App.css";
 import { Home } from "./sites/Home";
 import { Login } from "./sites/Login";
+import { Register } from "./sites/Register";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </>

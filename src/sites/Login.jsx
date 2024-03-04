@@ -10,6 +10,7 @@ export const Login = () => {
     localStorage.getItem("token") ? true : false
   );
   useEffect(() => {
+    document.title = "Login";
     if (loggedIn) {
       console.log(loggedIn);
       navigate("/");

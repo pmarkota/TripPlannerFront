@@ -6,8 +6,7 @@ export const Hero = () => {
   };
   return (
     <>
-      <div>Hero</div>
-      <button onClick={removeToken}>Log out</button>
+      <div>Hero placeholder</div>
     </>
   );
 };

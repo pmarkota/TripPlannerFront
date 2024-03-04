@@ -12,6 +12,7 @@ export const Register = () => {
     localStorage.getItem("token") ? true : false
   );
   useEffect(() => {
+    document.title = "Register";
     if (loggedIn) {
       console.log(loggedIn);
       navigate("/");

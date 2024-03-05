@@ -8,6 +8,8 @@ import { Register } from "./sites/Register";
 import { Planatrip } from "./components/Home/loggedin/Planatrip";
 import { Mytrips } from "./components/Home/loggedin/Mytrips";
 import { Trip } from "./components/Home/loggedin/Trip";
+import { Activity } from "./components/Home/loggedin/Activity";
+import { NewActivity } from "./components/Home/loggedin/NewActivity";
 import {
   BrowserRouter as Router,
   Route,
@@ -27,6 +29,8 @@ function App() {
           <Route path="/planatrip" element={<Planatrip />} />
           <Route path="/mytrips" element={<Mytrips />} />
           <Route path="/trip" element={<Trip />} />
+          <Route path="/activity" element={<Activity />} />
+          <Route path="/newactivity" element={<NewActivity />} />
         </Routes>
       </BrowserRouter>
     </>

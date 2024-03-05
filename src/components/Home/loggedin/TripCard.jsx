@@ -34,7 +34,7 @@ export const TripCard = (props) => {
         })}
       </p>
       <p
-        className="cursor-pointer shadow-lg shadow-blue-700 px-4 py-2 bg-blue-500 w-fit rounded-lg mx-auto text-white hover:bg-blue-400 transition-all duration-500 ease-in-out"
+        className="cursor-pointer shadow-lg shadow-violet-700 px-4 py-2 bg-violet-500 w-fit rounded-lg mx-auto text-white hover:bg-violet-400 transition-all duration-500 ease-in-out"
         onClick={viewTrip}
       >
         Continue

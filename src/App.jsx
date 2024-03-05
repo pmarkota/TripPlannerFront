@@ -5,6 +5,7 @@ import "./App.css";
 import { Home } from "./sites/Home";
 import { Login } from "./sites/Login";
 import { Register } from "./sites/Register";
+import { Planatrip } from "./components/Home/loggedin/Planatrip";
 import {
   BrowserRouter as Router,
   Route,
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/planatrip" element={<Planatrip />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -13,6 +13,7 @@ export const Mytrips = () => {
       .then((data) => {
         setTrips(data);
       });
+    document.title = "My Trips";
   }, []);
 
   return (

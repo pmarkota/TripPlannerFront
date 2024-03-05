@@ -72,12 +72,12 @@ export const NavBar = () => {
                 Plan a trip
               </Link>
               {loggedIn ? (
-                <a
-                  href="#"
+                <Link
+                  to="/mytrips"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   My trips
-                </a>
+                </Link>
               ) : null}
               {loggedIn ? (
                 <a

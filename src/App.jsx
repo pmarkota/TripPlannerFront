@@ -6,6 +6,7 @@ import { Home } from "./sites/Home";
 import { Login } from "./sites/Login";
 import { Register } from "./sites/Register";
 import { Planatrip } from "./components/Home/loggedin/Planatrip";
+import { Mytrips } from "./components/Home/loggedin/Mytrips";
 import {
   BrowserRouter as Router,
   Route,
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/planatrip" element={<Planatrip />} />
+          <Route path="/mytrips" element={<Mytrips />} />
         </Routes>
       </BrowserRouter>
     </>

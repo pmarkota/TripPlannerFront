@@ -9,6 +9,7 @@ export const Trip = (props) => {
   const tripId = localStorage.getItem("tripId");
   const [trip, setTrip] = useState({});
   const [activities, setActivities] = useState([]); // Add activities state
+  const [budgets, setBudgets] = useState([]); // Add budgets state
   const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   const postGetTripById = async () => {
@@ -25,6 +26,20 @@ export const Trip = (props) => {
     setTrip(data);
     setIsLoading(false); // Set loading state to false after trip data is fetched
   };
+
+  const postGetBudgetsForTrip = async () => {
+    //post request to get budgets for trip
+    const response = await fetch(`${apiUrl}budgets/trip`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ tripId }),
+    });
+    const data = await response.json();
+    setBudgets(data);
+    console.log(response.status, data);
+  };
   const postGetActivitiesForTrip = async () => {
     //post request to get activities for trip
     const response = await fetch(`${apiUrl}activities/trip`, {
@@ -36,12 +51,11 @@ export const Trip = (props) => {
     });
     const data = await response.json();
     setActivities(data);
-    console.log(response.status, data);
   };
   useEffect(() => {
-    console.log(tripId);
     postGetTripById();
     postGetActivitiesForTrip();
+    postGetBudgetsForTrip();
   }, [tripId]);
 
   useEffect(() => {
@@ -62,6 +76,12 @@ export const Trip = (props) => {
 
     // Return the formatted date string in the desired format
     return `${year}-${month}-${day}`;
+  };
+
+  const handleViewBudget = (budgetId) => {
+    // Navigate to the AddBudget page
+    localStorage.setItem("budgetId", budgetId);
+    navigate(`/budget`);
   };
 
   const allToUpper = (string) => {
@@ -128,6 +148,39 @@ export const Trip = (props) => {
               onClick={() => navigate("/newactivity")}
             >
               Add Activity
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center mt-8 bg-slate-50 w-fit rounded-lg shadow-2xl shadow-blue-200 ring-1 ring-blue-100  px-2 pb-2 pb-4">
+          <div className="w-80">
+            <div className="bg-blue-300 rounded-t-lg shadow-lg shadow-blue-400 mb-3">
+              <h1 className="text-2xl font-medium mb-2">BUDGET</h1>
+              <p className="text-gray-700 font-medium mb-2 pb-2">
+                Planned budgets for your trip
+              </p>
+            </div>
+            {budgets.map((budgets) => (
+              <div
+                key={budgets.budgetId}
+                className="bg-blue-200 rounded-lg shadow-lg shadow-blue-300 mb-3 flex justify-between px-4 pt-3
+                "
+              >
+                <h1 className="text-md font-medium mt-1 inline-block mr-10">
+                  {budgets.category}
+                </h1>
+                <p
+                  className="text-gray-700 font-medium mb-2 pb-2 inline bg-blue-300 rounded-lg px-4 py-2 cursor-pointer shadow-lg shadow-blue-500 hover:bg-blue-400 hover:shadow-blue-400 transition-all duration-500 ease-in-out"
+                  onClick={() => handleViewBudget(budgets.budgetId)}
+                >
+                  View
+                </p>
+              </div>
+            ))}
+            <p
+              className="cursor-pointer py-2 px-4 w-fit bg-blue-500 hover:bg-blue-400 hover:shadow-xl hover:shadow-blue-700 transition-all duration-500 ease-in-out shadow-blue-600 shadow-lg mx-auto rounded-lg mt-6 text-white"
+              onClick={() => navigate("/newbudget")}
+            >
+              Add Budget
             </p>
           </div>
         </div>

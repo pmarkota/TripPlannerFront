@@ -14,7 +14,8 @@ export const NavBar = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("id");
     setLoggedIn(false);
-    // navigate("/login");
+
+    navigate("/");
   };
 
   return (

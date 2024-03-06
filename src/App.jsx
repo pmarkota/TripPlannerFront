@@ -10,6 +10,7 @@ import { Mytrips } from "./components/Home/loggedin/Mytrips";
 import { Trip } from "./components/Home/loggedin/Trip";
 import { Activity } from "./components/Home/loggedin/Activity";
 import { NewActivity } from "./components/Home/loggedin/NewActivity";
+import { Budget } from "./components/Home/loggedin/Budget";
 import {
   BrowserRouter as Router,
   Route,
@@ -31,6 +32,7 @@ function App() {
           <Route path="/trip" element={<Trip />} />
           <Route path="/activity" element={<Activity />} />
           <Route path="/newactivity" element={<NewActivity />} />
+          <Route path="/budget" element={<Budget />} />
         </Routes>
       </BrowserRouter>
     </>

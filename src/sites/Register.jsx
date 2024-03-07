@@ -37,7 +37,7 @@ export const Register = () => {
   return (
     <>
       <div className="flex justify-center items-center h-screen">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form className="bg-white shadow-lg shadow-violet-300 rounded-lg px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -103,7 +103,16 @@ export const Register = () => {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="cursor-pointer shadow-lg mr-10 shadow-cyan-700 px-4 py-2 mt-3 bg-cyan-500 w-fit rounded-lg mx-auto text-white hover:bg-cyan-400 transition-all duration-500 ease-in-out"
+              type="button"
+              onClick={async () => {
+                navigate("/login");
+              }}
+            >
+              Go To Login
+            </button>
+            <button
+              className="cursor-pointer shadow-lg shadow-violet-700 px-4 py-2 mt-3 bg-violet-500 w-fit rounded-lg mx-auto text-white hover:bg-violet-400 transition-all duration-500 ease-in-out"
               type="button"
               onClick={async () => {
                 const data = await postRegisterData(email, username, password);

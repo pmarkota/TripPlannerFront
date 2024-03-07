@@ -52,7 +52,7 @@ export const Planatrip = () => {
   return (
     <>
       <NavBar></NavBar>
-      <div className="flex flex-col items-center mt-8 bg-slate-50 w-fit mx-auto px-6 py-10">
+      <div className="flex flex-col items-center mt-8 shadow-lg shadow-violet-300 rounded-lg bg-slate-50 w-fit mx-auto px-6 py-10">
         <div className="w-80">
           <label htmlFor="purpose" className="text-gray-700 font-medium mb-2">
             Purpose
@@ -87,12 +87,12 @@ export const Planatrip = () => {
           />
         </div>
 
-        <button
+        <p
+          className="cursor-pointer shadow-lg shadow-violet-700 px-4 py-2 mt-3 bg-violet-500 w-fit rounded-lg mx-auto text-white hover:bg-violet-400 transition-all duration-500 ease-in-out"
           onClick={handlePostTrip}
-          className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
         >
-          Plan Trip
-        </button>
+          Continue
+        </p>
       </div>
     </>
   );

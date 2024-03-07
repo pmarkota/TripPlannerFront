@@ -168,6 +168,7 @@ export const Trip = (props) => {
                 <h1 className="text-md font-medium mt-1 inline-block mr-10">
                   {budgets.category}
                 </h1>
+                <p className="pt-1 ">{budgets.amount}€</p>
                 <p
                   className="text-gray-700 font-medium mb-2 pb-2 inline bg-blue-300 rounded-lg px-4 py-2 cursor-pointer shadow-lg shadow-blue-500 hover:bg-blue-400 hover:shadow-blue-400 transition-all duration-500 ease-in-out"
                   onClick={() => handleViewBudget(budgets.budgetId)}

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const Home = () => {
   useEffect(() => {
     document.title = "Home";
+    document.getElementById("root").style.setProperty("padding", "2rem");
   }, []);
   return (
     <>

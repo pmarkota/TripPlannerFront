@@ -16,6 +16,7 @@ export const Login = () => {
       console.log(loggedIn);
       navigate("/");
     }
+    document.getElementById("root").style.setProperty("padding", "0px");
   }, [loggedIn, navigate]);
 
   const postLoginData = async (username, password) => {
@@ -37,7 +38,7 @@ export const Login = () => {
   };
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500 m-0 p-0">
         <form className="bg-white shadow-lg shadow-violet-300 rounded-lg px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <label

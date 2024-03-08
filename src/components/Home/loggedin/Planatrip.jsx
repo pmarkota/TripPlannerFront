@@ -52,7 +52,7 @@ export const Planatrip = () => {
   return (
     <>
       <NavBar></NavBar>
-      <div className="flex flex-col items-center mt-8 shadow-lg shadow-violet-300 rounded-lg bg-slate-50 w-fit mx-auto px-6 py-10">
+      <div className="flex flex-col items-center mt-8 shadow-lg shadow-violet-300 rounded-lg bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500  w-fit mx-auto px-6 py-10">
         <div className="w-80">
           <label htmlFor="purpose" className="text-gray-700 font-medium mb-2">
             Purpose

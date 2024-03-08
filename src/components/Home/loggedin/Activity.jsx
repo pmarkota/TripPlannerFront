@@ -23,7 +23,7 @@ export const Activity = () => {
     });
     const data = await response.json();
     setActivity(data);
-    console.log(data);
+    data;
   };
 
   const handleSaveActivity = async () => {

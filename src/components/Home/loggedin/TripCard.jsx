@@ -10,7 +10,6 @@ export const TripCard = (props) => {
   };
 
   const { trip } = props;
-  console.log(trip);
   return (
     <div className="bg-white shadow-lg shadow-violet-300 rounded-lg py-4 inline-block mx-10 mt-3">
       <div className="bg-gradient-to-tr from-violet-400 via-violet-300 to-violet-400 rounded-t-lg shadow-lg shadow-violet-300">

@@ -35,8 +35,6 @@ export const Activity = () => {
       body: JSON.stringify({ id, ...activity }),
     });
     const data = await response.json();
-    console.log(data);
-    console.log(response.status);
     navigate(-1);
   };
   useEffect(() => {

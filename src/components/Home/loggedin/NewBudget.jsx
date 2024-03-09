@@ -21,7 +21,6 @@ export const NewBudget = () => {
       },
       body: JSON.stringify({ tripId, ...budget }),
     });
-    console.log(response.status);
     navigate(-1);
   };
 

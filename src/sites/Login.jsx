@@ -13,7 +13,6 @@ export const Login = () => {
   useEffect(() => {
     document.title = "Login";
     if (loggedIn) {
-      console.log(loggedIn);
       navigate("/");
     }
     document.getElementById("root").style.setProperty("padding", "0px");
@@ -33,7 +32,6 @@ export const Login = () => {
     localStorage.setItem("id", decoded.id);
     setLoggedIn(true);
 
-    console.log(response.status, data);
     return data;
   };
   return (

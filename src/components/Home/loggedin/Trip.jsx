@@ -22,7 +22,6 @@ export const Trip = (props) => {
       body: JSON.stringify({ tripId, userId }),
     });
     const data = await response.json();
-    console.log(data);
     setTrip(data);
     setIsLoading(false); // Set loading state to false after trip data is fetched
   };
@@ -38,7 +37,6 @@ export const Trip = (props) => {
     });
     const data = await response.json();
     setBudgets(data);
-    console.log(response.status, data);
   };
   const postGetActivitiesForTrip = async () => {
     //post request to get activities for trip

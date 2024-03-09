@@ -23,7 +23,6 @@ export const Budget = () => {
     });
     const data = await response.json();
     setBudget(data);
-    console.log(data);
   };
 
   const handleSaveBudget = async () => {
@@ -34,7 +33,6 @@ export const Budget = () => {
       },
       body: JSON.stringify({ id, tripId, ...budget }),
     });
-    console.log(response.status);
     navigate(-1);
   };
   useEffect(() => {

@@ -14,7 +14,6 @@ export const Register = () => {
   useEffect(() => {
     document.title = "Register";
     if (loggedIn) {
-      console.log(loggedIn);
       navigate("/");
     }
     document.getElementById("root").style.setProperty("padding", "0px");
@@ -32,7 +31,6 @@ export const Register = () => {
     localStorage.setItem("token", data.token);
     setLoggedIn(true);
 
-    console.log(response.status, data);
     return data;
   };
   return (

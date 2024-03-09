@@ -8,7 +8,6 @@ const useCheckLoggedIn = () => {
   const loggedIn = token ? true : false;
   useEffect(() => {
     if (loggedIn) {
-      console.log(loggedIn);
       navigate("/");
     }
   }, [loggedIn, navigate]);

@@ -29,10 +29,11 @@ export const Register = () => {
     });
     const data = await response.json();
     localStorage.setItem("token", data.token);
-    setLoggedIn(true);
+    setLoggedIn(false);
 
     return data;
   };
+
   return (
     <>
       <div className="flex justify-center items-center h-screen bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-violet-200 via-fuchsia-500 to-yellow-500">

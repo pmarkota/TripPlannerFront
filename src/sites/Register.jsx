@@ -29,7 +29,7 @@ export const Register = () => {
     });
     const data = await response.json();
     localStorage.setItem("token", data.token);
-    setLoggedIn(false);
+    setLoggedIn(true);
 
     return data;
   };

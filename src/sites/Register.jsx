@@ -38,7 +38,7 @@ export const Register = () => {
     <>
       <div className="flex justify-center items-center h-screen bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-violet-300 via-fuchsia-500 to-yellow-500">
         <form className="bg-white shadow-lg shadow-violet-300 rounded-lg px-8 pt-6 pb-8 mb-4">
-          <div className="mb-4">
+          <div className="mb-5">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="username"

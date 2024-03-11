@@ -40,7 +40,7 @@ export const Register = () => {
         <form className="bg-white shadow-lg shadow-violet-300 rounded-lg px-8 pt-6 pb-8 mb-4">
           <div className="mb-5">
             <label
-              className="block text-gray-600 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="username"
             >
               Email

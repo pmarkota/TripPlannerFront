@@ -109,7 +109,7 @@ export const Register = () => {
                 navigate("/login");
               }}
             >
-              Go To Login?
+              Go To Login
             </button>
             <button
               className="cursor-pointer shadow-lg shadow-violet-700 px-4 py-2 mt-3 bg-violet-500 w-fit rounded-lg mx-auto text-white hover:bg-violet-400 transition-all duration-500 ease-in-out"

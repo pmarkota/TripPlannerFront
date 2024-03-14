@@ -31,7 +31,7 @@ export const Budget = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id, tripId, ...budget }),
+      body: JSON.stringify({ id, tripI, ...budget }),
     });
     navigate(-1);
   };

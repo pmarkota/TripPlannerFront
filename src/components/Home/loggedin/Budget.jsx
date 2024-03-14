@@ -44,7 +44,7 @@ export const Budget = () => {
   }, [budget.category]);
 
   const backgroundStyle = {
-    background: `url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/architect.svg')`,
+    background: `url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/architect.sv')`,
   };
 
   // Handler function to update activity name

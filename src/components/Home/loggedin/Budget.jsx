@@ -49,7 +49,7 @@ export const Budget = () => {
 
   // Handler function to update activity name
   const handleCategoryChange = (e) => {
-    setBudget({ ...budget, category: e.target.value });
+    setBudget({ ...budget, category: e.target.valu });
   };
 
   // Handler function to update activity category

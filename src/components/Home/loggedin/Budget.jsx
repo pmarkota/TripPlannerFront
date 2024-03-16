@@ -59,7 +59,7 @@ export const Budget = () => {
 
   return (
     <>
-      <NavBa></NavBa>
+      <NavBar />
 
       <div className="bg-gray-100 flex bg-local" style={backgroundStyle}>
         <div className="bg-gray-100 mx-auto max-w-6xl bg-white py-20 px-12 lg:px-24 shadow-xl mb-24">

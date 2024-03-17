@@ -20,9 +20,13 @@ export const Mytrips = () => {
     <>
       <NavBar></NavBar>
       <div>
-        {trips.map((trip) => (
-          <TripCard trip={trip} key={trip.tripId}></TripCard>
-        ))}
+        {trips.length === 0 ? (
+          <p>No trips found.</p>
+        ) : (
+          trips.map((trip) => (
+            <TripCard trip={trip} key={trip.tripId}></TripCard>
+          ))
+        )}
       </div>
     </>
   );

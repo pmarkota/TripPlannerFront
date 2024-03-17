@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { tokenDecoder } from "../utils/tokenDecoder";
 
 export const Register = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -29,6 +30,8 @@ export const Register = () => {
     });
     const data = await response.json();
     localStorage.setItem("token", data.token);
+    const decoded = tokenDecoder(data.token);
+    localStorage.setItem("userId", decoded.id);
     setLoggedIn(true);
 
     return data;

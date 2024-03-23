@@ -57,7 +57,7 @@ export const Register = () => {
               value={email}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  postRegisterData(email, username, passwor);
+                  postRegisterData(email, username, password);
                 }
               }}
             />

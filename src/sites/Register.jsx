@@ -53,7 +53,7 @@ export const Register = () => {
               id="email"
               type="text"
               placeholder="Enter your email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.valu)}
               value={email}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {

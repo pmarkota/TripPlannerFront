@@ -19,7 +19,7 @@ export const TripCard = (props) => {
       <img
         src={beachimg}
         alt="trip"
-        className="w-[300px] px-0 shadow-lg mb-3"
+        className="w-[300px] px-0 shadow-lg mb-32"
       />
       <p className="text-gray-500 mb-2 text-md px-4">
         {new Date(trip.startDate).toLocaleDateString("en-US", {

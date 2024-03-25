@@ -22,7 +22,7 @@ export const TripCard = (props) => {
         className="w-[300px] px-0 shadow-lg mb-3"
       />
       <p className="text-gray-500 mb-2 text-md px-4">
-        {new Date(trip.startDat).toLocaleDateString("en-US", {
+        {new Date(trip.startDate).toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
           day: "numeric",
